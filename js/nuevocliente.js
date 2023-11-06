@@ -5,7 +5,6 @@ const inputPhone = document.querySelector("#telefono")
 const inputCompanyName = document.querySelector("#empresa")
 const formulario = document.querySelector("#formulario")
 
-
 // VARIABLES.
 
 let id = 0
@@ -75,13 +74,12 @@ formulario.addEventListener("submit", (e) => {
     const isCompanyNameValid = checkCompanyName()
     if(isNameValid && isEmailValid && isPhoneValid && isCompanyNameValid){
         const client = {
-            id: ++id,
             name: inputName.value,
             email: inputEmail.value,
             phone: inputPhone.value,
             companyName: inputCompanyName.value
         }
-
-        createDB(client)
+        
+        addClientToDB(client)
     }
 })
