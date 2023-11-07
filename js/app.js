@@ -93,7 +93,7 @@ const loadClients = (clients) => {
       <td class="px-6 py-3">${client.companyName}</td>
       <td class="px-6 py-3">
         <button class="delete-button bg-red-500 hover:bg-red-600 font-bold px-2 rounded" client-id="${client.id}">X</button>
-        <button class="edit-button bg-gray-500 hover:bg-gray-600 font-bold px-2 rounded" client-id="${client.id} onclick="window.location.href='./editar-cliente.html'">Edit</button>
+        <button class="edit-button bg-gray-500 hover:bg-gray-600 font-bold px-2 rounded" client-id="${client.id}" onclick="window.location.href='./editar-cliente.html'">Edit</button>
       </td>
       `
     })

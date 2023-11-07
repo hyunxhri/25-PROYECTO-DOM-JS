@@ -1,3 +1,5 @@
+import { editClientFromDB } from './editarcliente.js'
+
 // SELECTORS.
 const inputName = document.querySelector("#nombre")
 const inputEmail = document.querySelector("#email")
@@ -80,6 +82,10 @@ formulario.addEventListener("submit", (e) => {
             companyName: inputCompanyName.value
         }
         
-        addClientToDB(client)
+        if(formulario.querySelector("input[value='Agregar Cliente']")){
+            addClientToDB(client)
+        } else if(formulario.querySelector("input[value='Guardar Cambios']")) {
+            editClientFromDB(client)
+        }
     }
 })
